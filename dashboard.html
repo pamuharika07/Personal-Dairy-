@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+{% block content %}
+<form method="POST">
+<input name="title" placeholder="Title">
+<textarea name="content"></textarea>
+<button>Add</button>
+</form>
+<hr>
+{% for e in entries %}
+<h3>{{e.title}}</h3>
+<p>{{e.content}}</p>
+{% endfor %}
+<a href="/logout">Logout</a>
+{% endblock %}
